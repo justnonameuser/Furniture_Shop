@@ -138,8 +138,8 @@
             <h5>
               Newsletter
             </h5>
-            <form action="">
-              <input type="email" placeholder="Enter your email">
+            <form action="php/process_email.php" method = "POST">
+              <input type="email" placeholder="Enter your email" name = "email">
               <button>
                 Subscribe
               </button>

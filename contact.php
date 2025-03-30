@@ -16,18 +16,18 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <form action="">
+          <form action="php/process.php" method="POST">
             <div>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Name" name = "Name"/>
             </div>
             <div>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" name = "Email"/>
             </div>
             <div>
-              <input type="text" placeholder="Phone" />
+              <input type="text" placeholder="Phone" name="Phone" />
             </div>
             <div>
-              <input type="text" class="message-box" placeholder="Message" />
+              <input type="text" class="message-box" placeholder="Message" name="Message"  />
             </div>
             <div class="d-flex ">
               <button>
@@ -157,8 +157,8 @@
             <h5>
               Newsletter
             </h5>
-            <form action="">
-              <input type="email" placeholder="Enter your email">
+            <form action="php/process_email.php" method = "POST">
+              <input type="email" placeholder="Enter your email" name = "email">
               <button>
                 Subscribe
               </button>
@@ -238,7 +238,6 @@
     })
   </script>
 
-</body>
-</body>
+
 
 </html>
