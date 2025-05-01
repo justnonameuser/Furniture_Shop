@@ -64,12 +64,25 @@
 
             </ul>
             <div class="user_option">
-              <a href="">
-                <img src="images/user.png" alt="">
-                <span>
-                  Login
-                </span>
-              </a>
+              <?php 
+                if(isset($_SESSION["userid"])){
+              ?>
+                <a href="#"><span><?php echo $_SESSION['useruid']; ?></span></a>
+                <a href="classes/logout.inc.php" class="header-login-a" style="padding-left: 10px;"><span>LOGOUT</span></a>
+              <?php 
+                } else {
+              ?>
+                <a href="login.php">
+                  <img src="images/user.png" alt="">
+                  <span>
+                    Login
+                  </span>
+                </a>
+              <?php
+                }
+              ?>
+
+
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
               </form>
