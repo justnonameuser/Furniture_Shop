@@ -13,6 +13,11 @@
                 <input type="password" name = "pwd" placeholder = "Password">
                 <input type="password" name = "pwdRepeat" placeholder = "Repeat password">
                 <input type="text" name = "email" placeholder = "E-mail">
+                <select name="role">
+                <option value="user">user</option>
+                <option value="admin">admin</option>
+                </select>
+
                 <br>
                 <button type="submit" name="submit">SIGN UP</button>
             </form>

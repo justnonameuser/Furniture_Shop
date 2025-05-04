@@ -5,12 +5,14 @@ class SignupContr extends Signup{
     private $pwd;
     private $pwdRepeat;
     private $email; 
+    private $role;
 
-    public function __construct($uid, $pwd, $pwdRepeat, $email) {
+    public function __construct($uid, $pwd, $pwdRepeat, $email, $role) {
         $this->uid = $uid;
         $this->pwd = $pwd;
         $this->pwdRepeat = $pwdRepeat;
         $this->email = $email;
+        $this->role = $role;
     }
 
 
@@ -36,7 +38,7 @@ class SignupContr extends Signup{
             exit();
         }
 
-        $this->setUser($this->uid, $this->uid, $this->email);
+        $this->setUser($this->uid, $this->uid, $this->email, $this->role);
     }
 
 

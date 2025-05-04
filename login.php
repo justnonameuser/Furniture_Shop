@@ -1,5 +1,6 @@
 <?php
-    include("php/header.php");
-    include('php/login_page.php');
-    include("php/footer.php");
+session_start();
+include("php/header.php");
+include('php/login_page.php');
+include("php/footer.php");
 ?>

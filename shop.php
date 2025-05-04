@@ -1,4 +1,11 @@
-<?php include 'php/header.php'; ?>
+<?php 
+session_start();
+include 'php/header.php'; 
+include_once 'classes/product.classes.php';
+
+$product = new Product();
+$products = $product->getAllProducts();
+?>
 
 
 
@@ -12,90 +19,37 @@
         </h2>
       </div>
       <div class="brand_container layout_padding2">
-        <div class="box">
-          <a href="">
-            <div class="new">
-              <h5>
-                New
-              </h5>
-            </div>
-            <div class="img-box">
-              <img src="images/slider-img.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6 class="price">
-                $100
-              </h6>
-              <h6>
-                Chair
-              </h6>
-            </div>
-          </a>
+        
+        <?php foreach ($products as $index => $item): ?>
+          <div class="box<?= $index >= 4 ? ' hidden-product' : '' ?>">
+            <a href="">
+              <div class="img-box">
+                <img src="<?= htmlspecialchars($item['image']) ?>" alt="">
+              </div>
+              <div class="detail-box">
+                <h6 class="price">$<?= htmlspecialchars($item['price']) ?></h6>
+                <h6><?= htmlspecialchars($item['name']) ?></h6>
+              </div>
+            </a>
+          </div>
+        <?php endforeach; ?>
+        <div class="custom-buttons-wrapper">
+            <button class="my-see-more-button" onclick="showMore()">See More</button>
+            <?php if (isset($_SESSION["userrole"]) && $_SESSION["userrole"] == 'admin'): ?>
+                <a href="create.php" class="my-add-button">+ Add</a>
+            <?php endif; ?>
         </div>
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/slider-img.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6 class="price">
-                $100
-              </h6>
-              <h6>
-                Chair
-              </h6>
-            </div>
-          </a>
-        </div>
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/slider-img.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6 class="price">
-                $100
-              </h6>
-              <h6>
-                Chair
-              </h6>
-            </div>
-          </a>
-        </div>
-        <div class="box">
-          <a href="">
-            <div class="img-box">
-              <img src="images/slider-img.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h6 class="price">
-                $100
-              </h6>
-              <h6>
-                Chair
-              </h6>
-            </div>
-          </a>
-        </div>
-      </div>
-      <a href="" class="brand-btn">
-        See More
-      </a>
     </div>
   </section>
+<script>
+  function showMore() {
+    document.querySelectorAll('.hidden-product').forEach(el => el.style.display = 'block');
+    document.querySelector('.see-more-wrapper').style.display = 'none';
+  }
+</script>
 
   <!-- end brand section -->
-
-
-  <!-- info section -->
-
-
-  <!-- end info_section -->
-
-
-  <!-- footer section -->
   <?php include "php/info_section.php"; include 'php/footer.php'; ?>
-  <!-- end  footer section -->
 
 </body>
 

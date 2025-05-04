@@ -1,4 +1,7 @@
-<?php include 'php/header.php'; ?>
+<?php 
+session_start();
+include 'php/header.php'; 
+?>
 
   <!-- trending section -->
 

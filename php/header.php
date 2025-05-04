@@ -3,7 +3,7 @@
 <html>
 
 <?php
-   require('_inc/functions.php');
+    require('_inc/functions.php');
 ?>
 
 <head>
@@ -28,10 +28,10 @@
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body class="sub_page">

@@ -1134,3 +1134,33 @@ a:focus {
   text-align: center;
   color: #666;
 }
+
+.hidden-product {
+  display: none;
+}
+
+.custom-buttons-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.my-see-more-button,
+.my-add-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f7444e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin: 5px;
+}
+
+.my-see-more-button:hover,
+.my-add-button:hover {
+  background-color: #c7353e;
+}
