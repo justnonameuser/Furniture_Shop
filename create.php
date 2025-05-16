@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once 'php/header.php'; 
-include_once 'classes/product.classes.php';
 
 
 $product = new Product();

@@ -1,6 +1,6 @@
 <?php
 
-include "dbh.classes.php";
+
 
 class Product extends Dbh {
     public function getAllProducts() {

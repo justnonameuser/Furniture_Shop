@@ -31,5 +31,11 @@ class Login extends Dbh {
         $_SESSION["userrole"] = $user["users_role"];
         $stmt = null;
     }
+    public function logout() {
+        session_start();
+        session_unset();
+        session_destroy();
+        header("location: ../login.php?error=none");
+    }
 }
 ?>

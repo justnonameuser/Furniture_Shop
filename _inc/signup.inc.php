@@ -7,9 +7,7 @@ if(isset($_POST["submit"])) {
     $pwdRepeat = $_POST["pwdRepeat"];
     $email = $_POST["email"];
     $role = $_POST["role"];
-    include "../classes/dbh.classes.php";
-    include "../classes/signup.classes.php";
-    include "../classes/signup-contr.classes.php";
+    require_once('autoload.php');
     $signup = new SignupContr($uid, $pwd, $pwdRepeat, $email, $role);
     $signup->signupUser();
     header("location: ../login.php?signup=success");

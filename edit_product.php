@@ -5,8 +5,7 @@ if (!isset($_SESSION["userrole"]) || $_SESSION["userrole"] !== 'admin') {
     header("Location: index.php");
     exit();
 }
-
-include_once 'classes/product.classes.php';
+include_once 'php/header.php';
 
 $productObj = new Product();
 
@@ -34,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<?php include 'php/header.php'; ?>
 
 <div class="container mt-5">
     <h2>Edit Product</h2>

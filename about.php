@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'php/header.php'; 
+include_once 'php/header.php'; 
 ?>
 
 

@@ -3,7 +3,7 @@
 <html>
 
 <?php
-    require('_inc/functions.php');
+require_once('_inc/autoload.php');
 ?>
 
 <head>
@@ -68,7 +68,7 @@
                 if(isset($_SESSION["userid"])){
               ?>
                 <a href="#"><span><?php echo $_SESSION['useruid']; ?></span></a>
-                <a href="classes/logout.inc.php" class="header-login-a" style="padding-left: 10px;"><span>LOGOUT</span></a>
+                <a href="_inc/classes/logout.inc.php" class="header-login-a" style="padding-left: 10px;"><span>LOGOUT</span></a>
               <?php 
                 } else {
               ?>

@@ -1,9 +1,3 @@
-<?php
-// Simulate user role (this could come from a database or other logic)
-//$user_role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'guest';
-
-// Function to generate the login form
-?>
 <section class = "index-login">
     <div class = "wrapper">
         <div class = "index-login-signup">

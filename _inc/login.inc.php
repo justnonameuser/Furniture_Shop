@@ -5,9 +5,7 @@ if(isset($_POST["submit"])) {
     $uid = $_POST["uid"];
     $pwd = $_POST["pwd"];
     
-    include "../classes/dbh.classes.php";
-    include "../classes/login.classes.php";
-    include "../classes/login-contr.classes.php";
+    require_once('autoload.php');
     $login = new loginContr($uid, $pwd);
     $login->loginUser();
     header("location: ../index.php?error=none");
