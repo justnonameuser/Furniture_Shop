@@ -7,4 +7,3 @@ if (!isset($_SESSION["userrole"]) || $_SESSION["userrole"] !== 'admin') {
     exit();
 }
 include 'php/footer.php';
-?>

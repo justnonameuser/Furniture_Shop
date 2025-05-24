@@ -46,7 +46,6 @@ class SignupContr extends Signup{
         $result = false;
         if (empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
             $result = false;
-            
         }
         else {
             $result = true; 
@@ -74,14 +73,13 @@ class SignupContr extends Signup{
     }
 
     private function pwdMatch() {
-        $result;
-        if ($this->pwd !== $this->pwdRepeat) {$result = false;}
-        else {$result = true;}
-        return $result;
+        return $this->pwd === $this->pwdRepeat;
     }
     private function uidTakenCheck() {
         $result;
-        if (!$this->checkUser($this->$uid, $this->email)) {$result = false;}
+        if (!$this->checkUser($this->uid, $this->email)) {
+            $result = false;
+        }
         else {$result = true;}
         return $result;
     }

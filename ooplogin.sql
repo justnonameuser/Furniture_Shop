@@ -41,12 +41,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `image`) VALUES
-(1, 'zc', 100.00, 'images/slider-img.png'),
-(2, 'xx', 202.00, 'images/slider-img.png'),
-(5, 'x', 23.00, 'images/slider-img.png'),
-(6, 'x', 23.00, 'images/slider-img.png'),
-(7, 'x', 23.00, 'images/slider-img.png'),
-(8, 'x', 2.00, 'images/slider-img.png'),
+(1, 'Chair Optimus', 100.00, 'images/slider-img.png'),
+(2, 'Chair Deluxe', 202.00, 'images/slider-img.png'),
+(5, 'Chair Super', 45.00, 'images/t-2.jpg'),
+(6, 'Chair X', 23.00, 'images/t-1.jpg'),
+(7, 'MegaChair', 69.00, 'images/t-2.jpg'),
+(8, 'x', 2.00, 'images/t-2.jpg'),
 (9, 'x', 2.00, 'images/slider-img.png'),
 (10, 'x', 2.00, 'images/slider-img.png'),
 (11, 'x', 2.00, 'images/slider-img.png'),
