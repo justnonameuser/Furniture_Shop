@@ -35,7 +35,7 @@ $products = $product->getAllProducts();
             <div class="custom-buttons-wrapper">
                 <button class="my-see-more-button" onclick="showMore()">See More</button>
                 <?php if (isset($_SESSION["userrole"]) && $_SESSION["userrole"] == 'admin'): ?>
-                    <a href="create.php" class="my-add-button">+ Add</a>
+                    <a href="admin.php" class="my-add-button">+ Add</a>
                 <?php endif; ?>
             </div>
         </div>

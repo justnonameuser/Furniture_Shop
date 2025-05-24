@@ -24,15 +24,7 @@ class loginContr extends Login{
 
 
     private function emptyInput() {
-        $result = false;
-        if (empty($this->uid) || empty($this->pwd)) {
-            $result = false;
-            
-        }
-        else {
-            $result = true; 
-        }
-        return $result;
+        return !(empty($this->uid) || empty($this->pwd));
     }
 
    

@@ -38,7 +38,7 @@ class SignupContr extends Signup{
             exit();
         }
 
-        $this->setUser($this->uid, $this->uid, $this->email, $this->role);
+        $this->setUser($this->uid, $this->pwd, $this->email, $this->role);
     }
 
 

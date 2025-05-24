@@ -14,11 +14,11 @@ if (isset($_GET['id'])) {
     $product = $productObj->getProduct($id);
 
     if (!$product) {
-        echo "Product not found.";
+        echo "Produkt nebol nájdený.";
         exit();
     }
 } else {
-    echo "No product ID provided.";
+    echo "Nie je uvedené ID výrobku.";
     exit();
 }
 
