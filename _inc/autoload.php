@@ -7,4 +7,5 @@ include_once("classes/login.classes.php");
 include_once("classes/controllers/login-contr.classes.php");
 include_once('classes/product.classes.php');
 require_once('functions.php');
+require_once 'classes/testemonial.php';
 ?>

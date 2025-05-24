@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Pi 16.Máj 2025, 19:39
+-- Čas generovania: So 24.Máj 2025, 23:52
 -- Verzia serveru: 10.4.32-MariaDB
 -- Verzia PHP: 8.2.12
 
@@ -56,6 +56,29 @@ INSERT INTO `products` (`id`, `name`, `price`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Štruktúra tabuľky pre tabuľku `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `role` varchar(100) DEFAULT NULL,
+  `message` text NOT NULL,
+  `image_path` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Sťahujem dáta pre tabuľku `testimonials`
+--
+
+INSERT INTO `testimonials` (`id`, `name`, `role`, `message`, `image_path`) VALUES
+(1, 'Magna', 'Consectetur adipiscing', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit', 'images/client-1.png'),
+(2, 'Aliqua', 'Consectetur adipiscing', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...dolor sit amet, consectetur adipiscing elit...dolor sit amet, consectetur adipiscing elit...', 'images/client-2.png'),
+(8, 'James Walker', 'Interior Designer', 'Excellent quality fittings and accessories! I’ve been using your furniture hardware for several of my interior projects, and the durability and design never disappoint. The installation process is smooth, and my clients are always satisfied with the final result.', 'images/avatar-png.png');
+
+-- --------------------------------------------------------
+
+--
 -- Štruktúra tabuľky pre tabuľku `users`
 --
 
@@ -88,6 +111,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexy pre tabuľku `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexy pre tabuľku `users`
 --
 ALTER TABLE `users`
@@ -102,6 +131,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT pre tabuľku `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pre tabuľku `users`
