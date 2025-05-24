@@ -43,45 +43,21 @@ class SignupContr extends Signup{
 
 
     private function emptyInput() {
-        $result = false;
-        if (empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
-            $result = false;
-        }
-        else {
-            $result = true; 
-        }
-        return $result;
+        return !(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email));
     }
-
     private function invalidUid() {
-        $result;
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uid))
-        {$result = false;}
-        else {$result = true;}
-        return $result;
+        return preg_match("/^[a-zA-Z0-9]*$/", $this->uid);
     }
 
     private function invalidEmail() {
-        $result;
-        if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
-            $result = false;
-        }
-        else {
-            $result = true;
-        }
-        return $result;
+        return filter_var($this->email, FILTER_VALIDATE_EMAIL);
     }
 
     private function pwdMatch() {
         return $this->pwd === $this->pwdRepeat;
     }
     private function uidTakenCheck() {
-        $result;
-        if (!$this->checkUser($this->uid, $this->email)) {
-            $result = false;
-        }
-        else {$result = true;}
-        return $result;
+        return $this->checkUser($this->uid, $this->email);
     }
 }
 
